@@ -35,12 +35,29 @@ for z in range(random.randint(3,10)): #het maximum is niet aangegeven
     SpeciaalTeken = (random.choice(SpecialeTekens))
     SpecialeTekenList.append(SpeciaalTeken)
 
+NulTotNegen = [0,1,2,3,4,5,6,7,8,9]
+NummerList = []
+for n in range(random.randint(4,7)):
+    Nummer = random.choice(NulTotNegen)
+    NummerList.append(Nummer)
 
-
-
-
+Password = HoofdLetterList + KleineLetterList + SpecialeTekenList + NummerList
 
 
 print(HoofdLetterList)
 print(KleineLetterList)
 print(SpecialeTekenList)
+print(NummerList)
+
+
+random.shuffle(Password)
+while True:
+    if Password[0] in SpecialeTekenList or Password[-1] in SpecialeTekenList or Password[0:3] in NummerList: # [-1] pakt de laatste element van een list en [0:3] pakt de eerste 3 elementen
+        print("reroll")
+        print(Password)
+        random.shuffle(Password)
+    else:
+        break
+
+print("result")
+print(Password)
