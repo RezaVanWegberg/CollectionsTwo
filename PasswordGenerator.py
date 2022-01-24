@@ -15,7 +15,7 @@ import random
 string.ascii_uppercase
 
 HoofdLetterList = []
-for x in range(random.randint(1,6)):
+for x in range(random.randint(2,6)):
     HoofdLetter = (random.choice(string.ascii_uppercase))
     HoofdLetterList.append(HoofdLetter)
 
@@ -24,7 +24,7 @@ for x in range(random.randint(1,6)):
 string.ascii_lowercase
 
 KleineLetterList = []
-for y in range(random.randint(1,8)):
+for y in range(random.randint(8,14)):
     KleineLetter = (random.choice(string.ascii_lowercase))
     KleineLetterList.append(KleineLetter)
 
@@ -53,7 +53,7 @@ print(NummerList)
 random.shuffle(Password)
 while True:
     if Password[0] in SpecialeTekenList or Password[-1] in SpecialeTekenList or Password[0:3] in NummerList: # [-1] pakt de laatste element van een list en [0:3] pakt de eerste 3 elementen
-        print("reroll")
+        print("reRollDobbelsteen")
         print(Password)
         random.shuffle(Password)
     else:
