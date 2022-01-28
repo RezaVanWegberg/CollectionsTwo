@@ -112,6 +112,8 @@ for x in range(6):
                         k = False
             else:
                 print("die kan niet meer")
+        elif KeuzeScore == "HELP":
+            k = False
         else:
             print("dat kan niet")
     bord()
